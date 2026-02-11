@@ -1,10 +1,18 @@
 <!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Enviar propuesta — Grupo Pacvil</title><link rel="stylesheet" href="./assets/styles.css"></head><body>
 <header class="nav"><div class="container nav-inner"><a class="brand" href="./index.html">Grupo Pacvil</a><nav class="menu"><a href="./nosotros.html">Nosotros</a><a href="./inversiones.html">Inversiones</a><a href="./equipo.html">Equipo</a><a href="./blog.html">Blog</a></nav><a class="btn btn-primary" href="./propuesta.html">Enviar propuesta</a></div></header>
 <main class="container"><section><h1>Enviar propuesta de inversión</h1><p class="lead">Comparte la información clave para evaluar tu oportunidad con rapidez y claridad.</p>
-<form class="card" action="https://formspree.io/f/mgoloqqn" method="POST">
+<form class="card" action="https://formspree.io/f/mgoloqqn" method="POST" id="leadForm">
   <input type="hidden" name="_subject" value="Nueva propuesta de inversión — Grupo Pacvil" />
   <input type="hidden" name="_language" value="es" />
   <input type="hidden" name="_next" value="https://grupo-pacvil.vercel.app/propuesta.html?ok=1" />
+  <input type="hidden" name="_gotcha" value="" />
+  <input type="hidden" name="_timestamp" id="tsField" value="" />
+
+  <div style="position:absolute;left:-9999px;opacity:0;pointer-events:none;" aria-hidden="true">
+    <label>No llenar este campo</label>
+    <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
+  </div>
+
   <div class="form-grid">
     <div><label>Nombre completo</label><input required name="nombre" /></div>
     <div><label>Correo</label><input required type="email" name="correo" /></div>

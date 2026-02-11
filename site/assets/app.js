@@ -13,3 +13,27 @@ if (params.get('ok') === '1') {
     form.prepend(msg);
   }
 }
+
+// Anti-spam client-side (complementa protecciones de Formspree)
+const leadForm = document.getElementById('leadForm');
+if (leadForm) {
+  const startedAt = Date.now();
+  const tsField = document.getElementById('tsField');
+  if (tsField) tsField.value = String(startedAt);
+
+  leadForm.addEventListener('submit', (e) => {
+    const honey = leadForm.querySelector('input[name="company_website"]');
+    const elapsedMs = Date.now() - startedAt;
+
+    // Bloquea bots que llenan honeypot o envían demasiado rápido (< 4s)
+    if ((honey && honey.value.trim() !== '') || elapsedMs < 4000) {
+      e.preventDefault();
+      const warn = document.createElement('p');
+      warn.className = 'notice';
+      warn.style.color = '#ffb4b4';
+      warn.style.marginTop = '10px';
+      warn.textContent = 'No se pudo enviar. Intenta nuevamente en unos segundos.';
+      leadForm.appendChild(warn);
+    }
+  });
+}
