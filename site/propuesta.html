@@ -1,0 +1,20 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Enviar propuesta — Grupo Pacvil</title><link rel="stylesheet" href="./assets/styles.css"></head><body>
+<header class="nav"><div class="container nav-inner"><a class="brand" href="./index.html">Grupo Pacvil</a><nav class="menu"><a href="./nosotros.html">Nosotros</a><a href="./inversiones.html">Inversiones</a><a href="./equipo.html">Equipo</a><a href="./blog.html">Blog</a></nav><a class="btn btn-primary" href="./propuesta.html">Enviar propuesta</a></div></header>
+<main class="container"><section><h1>Enviar propuesta de inversión</h1><p class="lead">Comparte la información clave para evaluar tu oportunidad con rapidez y claridad.</p>
+<form class="card" action="#" method="post">
+  <div class="form-grid">
+    <div><label>Nombre completo</label><input required name="nombre" /></div>
+    <div><label>Correo</label><input required type="email" name="correo" /></div>
+    <div><label>Empresa</label><input required name="empresa" /></div>
+    <div><label>Tipo</label><select name="tipo"><option>Startup</option><option>Empresa madura</option></select></div>
+    <div><label>Industria</label><input name="industria" /></div>
+    <div><label>Monto buscado (USD)</label><input name="monto" /></div>
+  </div>
+  <div style="margin-top:14px"><label>Uso de fondos</label><textarea name="uso_fondos"></textarea></div>
+  <div style="margin-top:14px"><label>Link de deck / data room</label><input type="url" name="deck" /></div>
+  <div style="margin-top:14px"><label>¿Por qué encaja con Grupo Pacvil?</label><textarea name="encaje"></textarea></div>
+  <p class="notice">* Este MVP es estático. En la siguiente iteración conectamos este formulario a un backend/CRM.</p>
+  <button class="btn btn-primary" type="submit">Enviar propuesta</button>
+</form>
+</section></main>
+<footer class="footer"><div class="container">© <span id="year"></span> Grupo Pacvil</div></footer><script src="./assets/app.js"></script></body></html>
