@@ -67,7 +67,15 @@ textarea { min-height: 120px; }
 .notice { font-size: 13px; color: var(--muted); }
 .blog-list a { display: block; padding: 14px; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; }
 .tag { font-size: 12px; color: #9fd6ff; }
+.floating-cta {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 60;
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
 @media (max-width: 900px) {
   .grid-3, .grid-2, .form-grid { grid-template-columns: 1fr; }
   .menu { display: none; }
+  .floating-cta { right: 12px; bottom: 12px; }
 }

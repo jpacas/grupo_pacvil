@@ -33,15 +33,19 @@ if (params.get('ok') === '1') {
     msg.textContent = '¡Gracias! Tu propuesta fue enviada. Te responderemos en 48–72h hábiles.';
     form.prepend(msg);
   }
+}
 
-  // Conversión: envío exitoso de propuesta
-  if (typeof window.gtag === 'function') {
+// Conversión principal: thank-you page dedicada
+if (window.location.pathname.endsWith('/gracias.html')) {
+  const key = 'pacvil_lead_fired_v1';
+  if (!sessionStorage.getItem(key) && typeof window.gtag === 'function') {
     window.gtag('event', 'generate_lead', {
       form_name: 'propuesta_inversion',
       channel: 'website',
       value: 1,
       currency: 'USD',
     });
+    sessionStorage.setItem(key, '1');
   }
 }
 
