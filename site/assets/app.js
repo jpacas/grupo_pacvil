@@ -1,6 +1,27 @@
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
+// GA4
+(function setupGA4() {
+  const GA_ID = 'G-B2V5CVTPP8';
+  if (!GA_ID) return;
+
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  document.head.appendChild(s);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+
+  window.gtag('js', new Date());
+  window.gtag('config', GA_ID, {
+    page_path: window.location.pathname,
+    page_title: document.title,
+    page_location: window.location.href,
+  });
+})();
+
 const params = new URLSearchParams(window.location.search);
 if (params.get('ok') === '1') {
   const form = document.querySelector('form.card');
@@ -11,6 +32,16 @@ if (params.get('ok') === '1') {
     msg.style.marginBottom = '12px';
     msg.textContent = '¡Gracias! Tu propuesta fue enviada. Te responderemos en 48–72h hábiles.';
     form.prepend(msg);
+  }
+
+  // Conversión: envío exitoso de propuesta
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'generate_lead', {
+      form_name: 'propuesta_inversion',
+      channel: 'website',
+      value: 1,
+      currency: 'USD',
+    });
   }
 }
 
