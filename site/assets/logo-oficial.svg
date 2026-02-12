@@ -1,0 +1,23 @@
+<svg width="960" height="320" viewBox="0 0 960 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gpb" x1="84" y1="236" x2="272" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="320" rx="24" fill="#F6F9FF"/>
+
+  <rect x="72" y="56" width="208" height="208" rx="36" fill="#E9F1FF"/>
+
+  <!-- Structural base blocks -->
+  <rect x="108" y="174" width="34" height="52" rx="8" fill="#0F172A" fill-opacity="0.85"/>
+  <rect x="152" y="152" width="34" height="74" rx="8" fill="#0F172A" fill-opacity="0.88"/>
+  <rect x="196" y="126" width="34" height="100" rx="8" fill="#0F172A" fill-opacity="0.92"/>
+
+  <!-- Upward arrow / growth -->
+  <path d="M106 206L170 144L200 174L258 114" stroke="url(#gpb)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M242 114H258V130" stroke="url(#gpb)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="326" y="154" fill="#0F172A" font-family="Inter, system-ui, Arial" font-size="56" font-weight="800" letter-spacing="0.5">Grupo Pacvil</text>
+  <text x="326" y="198" fill="#4B5563" font-family="Inter, system-ui, Arial" font-size="26" font-weight="500">Capital con disciplina y visión empresarial</text>
+</svg>
