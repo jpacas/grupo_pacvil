@@ -49,3 +49,10 @@ Para forzar `lastmod` en todas las URLs:
 ```bash
 scripts/update_sitemap.py --all
 ```
+
+## Agregar meta de redes (script)
+Para asegurar `og:image` y `twitter:image` en nuevos posts:
+
+```bash
+scripts/add_social_meta.py site/blog/posts/AAAA-MM-DD-mi-post.html
+```
