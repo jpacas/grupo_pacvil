@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://grupo-pacvil.vercel.app/sitemap.xml
+
+# Exclude utility/branding pages from indexing
+Disallow: /brand.html
+Disallow: /logos.html
+Disallow: /blog.html
