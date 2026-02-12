@@ -109,6 +109,19 @@ if (window.location.pathname.endsWith('/gracias.html')) {
   }
 }
 
+// Funnel: click en CTA de propuesta
+(function setupLeadCtaTracking() {
+  if (typeof window.gtag !== 'function') return;
+  document.querySelectorAll('a[href*="propuesta.html"]').forEach((a) => {
+    a.addEventListener('click', () => {
+      window.gtag('event', 'click_cta_propuesta', {
+        location_path: window.location.pathname,
+        link_text: (a.textContent || '').trim().slice(0, 60),
+      });
+    });
+  });
+})();
+
 // Anti-spam client-side (complementa protecciones de Formspree)
 const leadForm = document.getElementById('leadForm');
 if (leadForm) {
