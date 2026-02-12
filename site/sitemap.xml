@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://grupo-pacvil.vercel.app/blog/</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -75,6 +75,30 @@
   <url>
     <loc>https://grupo-pacvil.vercel.app/blog/posts/2026-02-15-ecosistema-inversion-centroamerica.html</loc>
     <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://grupo-pacvil.vercel.app/blog/posts/2026-02-16-cuanto-equity-ceder-primera-ronda.html</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://grupo-pacvil.vercel.app/blog/posts/2026-02-17-como-calcular-burn-rate-runway.html</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://grupo-pacvil.vercel.app/blog/posts/2026-02-18-red-flags-rechazan-startups.html</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://grupo-pacvil.vercel.app/blog/posts/2026-02-19-family-offices-vs-vcs-centroamerica.html</loc>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
