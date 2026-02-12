@@ -30,8 +30,9 @@ a { color: inherit; text-decoration: none; }
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
 .brand { font-weight: 900; letter-spacing: .2px; color: #0b3bbd; }
-.menu { display: flex; gap: 18px; font-size: 14px; color: var(--muted); }
+.menu { display: flex; gap: 18px; font-size: 14px; color: var(--muted); align-items: center; }
 .menu a:hover { color: var(--brand); }
+.menu a { white-space: nowrap; }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
@@ -109,7 +110,15 @@ textarea { min-height: 120px; }
 
 @media (max-width: 900px) {
   .grid-3, .grid-2, .form-grid { grid-template-columns: 1fr; }
-  .menu { display: none; }
+  .menu {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    max-width: 50vw;
+    scrollbar-width: thin;
+    padding-bottom: 2px;
+  }
+  .menu a { font-size: 13px; }
   .floating-cta { right: 12px; bottom: 12px; }
   .hero p { font-size: 16px; }
 }
