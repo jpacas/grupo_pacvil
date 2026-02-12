@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://grupo-pacvil.vercel.app/blog/</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -57,6 +57,24 @@
   <url>
     <loc>https://grupo-pacvil.vercel.app/blog/posts/2026-02-12-metricas-etapa-temprana.html</loc>
     <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://grupo-pacvil.vercel.app/blog/posts/2026-02-13-cac-ltv-churn-guia-practica.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://grupo-pacvil.vercel.app/blog/posts/2026-02-14-que-buscamos-en-founders.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://grupo-pacvil.vercel.app/blog/posts/2026-02-15-ecosistema-inversion-centroamerica.html</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
