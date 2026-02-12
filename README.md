@@ -31,3 +31,8 @@ python3 -m http.server 8080
 
 Abrir:
 `http://localhost:8080/site/`
+
+## Publicar en el blog (guia rapida)
+- Duplica `site/blog/posts/template.html`
+- Cambia titulo, fecha y contenido
+- Agrega el enlace en `site/blog/index.html`
