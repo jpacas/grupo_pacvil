@@ -36,3 +36,16 @@ Abrir:
 - Duplica `site/blog/posts/template.html`
 - Cambia titulo, fecha y contenido
 - Agrega el enlace en `site/blog/index.html`
+
+## Actualizar sitemap (script)
+Para mantener el sitemap al dia cuando publicas un post:
+
+```bash
+scripts/update_sitemap.py --post site/blog/posts/AAAA-MM-DD-mi-post.html
+```
+
+Para forzar `lastmod` en todas las URLs:
+
+```bash
+scripts/update_sitemap.py --all
+```
