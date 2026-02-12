@@ -1,0 +1,22 @@
+<svg width="960" height="320" viewBox="0 0 960 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gpa" x1="80" y1="40" x2="260" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="320" rx="24" fill="#F6F9FF"/>
+
+  <!-- Icon container -->
+  <rect x="72" y="56" width="208" height="208" rx="36" fill="#E9F1FF"/>
+
+  <!-- G (structured arc) -->
+  <path d="M176 90C140.7 90 112 118.7 112 154C112 189.3 140.7 218 176 218C207.7 218 233.9 194.9 238.8 164H181V142H264V154C264 202.6 224.6 242 176 242C127.4 242 88 202.6 88 154C88 105.4 127.4 66 176 66C206.7 66 234.2 81.9 250 106L229.4 119.2C217.7 101.2 198.5 90 176 90Z" fill="url(#gpa)"/>
+
+  <!-- P rising cut -->
+  <path d="M176 92V228H202V176H228C255.6 176 278 153.6 278 126C278 98.4 255.6 76 228 76H176V92ZM202 102H228C241.2 102 252 112.8 252 126C252 139.2 241.2 150 228 150H202V102Z" fill="#0F172A" fill-opacity="0.88"/>
+
+  <!-- wordmark -->
+  <text x="326" y="154" fill="#0F172A" font-family="Inter, system-ui, Arial" font-size="56" font-weight="800" letter-spacing="0.5">Grupo Pacvil</text>
+  <text x="326" y="198" fill="#4B5563" font-family="Inter, system-ui, Arial" font-size="26" font-weight="500">Inversión estratégica de largo plazo</text>
+</svg>
