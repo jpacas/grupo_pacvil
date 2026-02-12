@@ -202,3 +202,92 @@ if (leadForm) {
     }
   });
 }
+
+// Analytics avanzado: Scroll depth tracking
+(function setupScrollTracking() {
+  if (typeof window.gtag !== 'function') return;
+  const thresholds = [25, 50, 75, 90];
+  const triggered = {};
+
+  function checkScroll() {
+    const scrollPercent = Math.round(
+      (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+    );
+    thresholds.forEach((threshold) => {
+      if (scrollPercent >= threshold && !triggered[threshold]) {
+        triggered[threshold] = true;
+        window.gtag('event', 'scroll_depth', {
+          percent: threshold,
+          page_path: window.location.pathname,
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkScroll, { passive: true });
+})();
+
+// Analytics avanzado: Form abandonment tracking
+(function setupFormAbandonmentTracking() {
+  if (typeof window.gtag !== 'function') return;
+  const form = document.getElementById('leadForm');
+  if (!form) return;
+
+  let formStarted = false;
+  let formSubmitted = false;
+
+  form.querySelectorAll('input, textarea, select').forEach((field) => {
+    field.addEventListener('input', () => { formStarted = true; }, { once: true });
+  });
+
+  form.addEventListener('submit', () => { formSubmitted = true; });
+
+  window.addEventListener('beforeunload', () => {
+    if (formStarted && !formSubmitted) {
+      window.gtag('event', 'form_abandonment', {
+        form_name: 'propuesta_inversion',
+      });
+    }
+  });
+})();
+
+// Analytics avanzado: Form start tracking
+(function setupFormStartTracking() {
+  if (typeof window.gtag !== 'function') return;
+  const form = document.getElementById('leadForm');
+  if (!form) return;
+
+  let formStarted = false;
+  form.querySelectorAll('input, textarea, select').forEach((field) => {
+    field.addEventListener('focus', () => {
+      if (!formStarted) {
+        formStarted = true;
+        window.gtag('event', 'form_start', { form_name: 'propuesta_inversion' });
+      }
+    }, { once: true });
+  });
+})();
+
+// Analytics avanzado: Blog read completion tracking
+(function setupBlogReadTracking() {
+  if (typeof window.gtag !== 'function') return;
+  if (!window.location.pathname.includes('/blog/posts/')) return;
+
+  const article = document.querySelector('article .card');
+  if (!article) return;
+
+  let readComplete = false;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.8 && !readComplete) {
+        readComplete = true;
+        window.gtag('event', 'blog_read_complete', {
+          page_path: window.location.pathname,
+          page_title: document.title,
+        });
+      }
+    });
+  }, { threshold: 0.8 });
+
+  observer.observe(article);
+})();
