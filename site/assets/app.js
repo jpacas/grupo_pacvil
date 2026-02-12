@@ -15,7 +15,7 @@ if (year) year.textContent = new Date().getFullYear();
   btn.setAttribute('aria-expanded', 'false');
   btn.textContent = '☰';
 
-  navInner.insertBefore(btn, navInner.children[2] || null);
+  navInner.insertBefore(btn, navInner.firstElementChild);
 
   btn.addEventListener('click', () => {
     const open = nav.classList.toggle('menu-open');
